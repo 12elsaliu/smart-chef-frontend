@@ -1,13 +1,13 @@
 import React from 'react';
 import Tilt from 'react-tilt';
-import './Logo.css'
+import logo from './logoBlack.png'
 
 export const Logo = () => {
 
   return (
-    <div className='ma5 mt0 '>
-      <Tilt className="Tilt br=4 shadow-2 br-100" options={{ max: 40 }} style={{ height: 100, width: 100 }} >
-        <div className="Tilt-inner"> 👽 </div>
+    <div className='ma3 mt0 '>
+      <Tilt className="Tilt br=4 br-100" options={{ max: 40 }} style={{ height: 150, width: 150 }} >
+        <div className="Tilt-inner center"><img className="pt4" alt='logo' src={logo} /></div>
       </Tilt>
     </div>
 
