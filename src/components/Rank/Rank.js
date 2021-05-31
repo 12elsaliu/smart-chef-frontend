@@ -1,14 +1,9 @@
 import React from 'react';
 
-export const Rank = () => {
+export const Rank = ({ name, rank }) => {
   return (
     <div>
-      <div>
-        {'Hi Elsa, your rank is '}
-      </div>
-      <div>
-        {'#100'}
-      </div>
+      {`Hi ${name}, your entries are ${rank}`}
     </div>
   )
 }
