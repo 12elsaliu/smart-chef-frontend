@@ -27,7 +27,7 @@ export class Register extends React.Component {
 
   onSubmit = () => {
     if (this.state.email && this.state.name && this.state.password) {
-      fetch("http://localhost:3000/register", {
+      fetch("https://salty-shelf-28856.herokuapp.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,10 +41,14 @@ export class Register extends React.Component {
       })
         .then((res) => res.json()) //receive
         .then((data) => {
-          this.props.loadUser(data); //Put it in App.js states, in order to let all the other components can use the register data
+          if (data.id) {
+            this.props.loadUser(data); //Put it in App.js states, in order to let all the other components can use the register data
+            this.props.onRouterChange("home");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
         });
-
-      this.props.onRouterChange("home");
     }
   };
 

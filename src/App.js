@@ -72,7 +72,7 @@ class App extends React.Component {
             this.state.imgUrl
           )
           .then((response) => {
-            fetch("http://localhost:3000/image", {
+            fetch("https://salty-shelf-28856.herokuapp.com/image", {
               method: "PUT",
               headers: {
                 "Content-Type": "application/json",
@@ -83,7 +83,6 @@ class App extends React.Component {
             })
               .then((res) => res.json())
               .then((user) => {
-                console.log(user);
                 this.setState(
                   Object.assign(this.state.user, { entries: user })
                 );
@@ -101,13 +100,10 @@ class App extends React.Component {
   };
 
   displayIngredients = (data) => {
-    console.log(data.outputs[0].data.concepts);
     const prediction = data.outputs[0].data.concepts.map((item) => {
       const value = Number(item.value).toPrecision(3);
       return `${item.name}    (possibilities: ${value})`;
     });
-
-    console.log(prediction);
     this.setState({
       prediction,
     });
