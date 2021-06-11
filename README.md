@@ -2,13 +2,13 @@
 
 Examples of App Screenshots:
 1. sign in page
-<img src="/images/sign-in.JPG" alt="drawing" width="900"/>
+<img src="/images/sign-in.png" alt="drawing" width="900"/>
 
 2. registration page
-<img src="/images/registration.JPG" alt="drawing" width="900"/>
+<img src="/images/registration.png" alt="drawing" width="900"/>
 
 3. dish recognition page
-<img src="/images/recognition.JPG" alt="drawing" width="900"/>
+<img src="/images/recognition.png" alt="drawing" width="900"/>
 
 
 Project description: 
