@@ -100,13 +100,17 @@ class App extends React.Component {
   };
 
   displayIngredients = (data) => {
-    const prediction = data.outputs[0].data.concepts.map((item) => {
-      if (item.name === "vegetable") {
-        return "";
-      }
-      const value = Number(item.value).toPrecision(3);
-      return `${item.name}    (possibilities: ${value})`;
-    });
+    const prediction = data.outputs[0].data.concepts
+      .filter((item) => {
+        if (item.name === "vegetable") {
+          return false;
+        }
+        return true;
+      })
+      .map((item) => {
+        const value = Number(item.value).toPrecision(3);
+        return `${item.name}    (possibilities: ${value})`;
+      });
     this.setState({
       prediction,
     });

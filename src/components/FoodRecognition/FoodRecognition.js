@@ -2,19 +2,13 @@ import React from "react";
 import "./foodRecognition.css";
 
 export const FoodRecognition = ({ url, prediction }) => {
-  const ingredients = prediction
-    .filter((item) => {
-      if (!item) {
-        return false;
-      }
-    })
-    .map((item) => {
-      return (
-        <li class="ph3 pv3 bb b--light-silver" key={item}>
-          {item}
-        </li>
-      );
-    });
+  const ingredients = prediction.map((item) => {
+    return (
+      <li class="ph3 pv3 bb b--light-silver" key={item}>
+        {item}
+      </li>
+    );
+  });
   return (
     // <div>
     //   <div style={{ backgroundColor: "grey" }}>
