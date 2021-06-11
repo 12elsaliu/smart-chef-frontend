@@ -12,9 +12,11 @@ Examples of App Screenshots:
 
 
 Project description: 
-* Smart Chef is a health and wellness related web application based on React framework. 
+* Smart Chef is a health and wellness focused web application based on React framework. 
 * It's a dishes recognition app using pre-trained Machine Learning API. 
-* When users input the url link of dises images, Smart Chef will reconise the food items in the dishes down to the ingredient level and provide suggestions of recreating the dishes.
+* When user inputs the URL of dish image, Smart Chef will recognise the food items in the dishes down to the ingredient level and provide suggestions of recreating the dishes.
+
+
 
 Major technologies: 
 * Web application based on React framework
