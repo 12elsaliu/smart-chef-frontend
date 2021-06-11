@@ -102,7 +102,7 @@ class App extends React.Component {
   displayIngredients = (data) => {
     const prediction = data.outputs[0].data.concepts
       .filter((item) => {
-        if (item.name === "vegetable") {
+        if (item.name === ("vegetable" || "meat" || "pizza")) {
           return false;
         }
         return true;
