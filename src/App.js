@@ -101,6 +101,9 @@ class App extends React.Component {
 
   displayIngredients = (data) => {
     const prediction = data.outputs[0].data.concepts.map((item) => {
+      if (item.name === "vegetable") {
+        return "";
+      }
       const value = Number(item.value).toPrecision(3);
       return `${item.name}    (possibilities: ${value})`;
     });
