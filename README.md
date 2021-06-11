@@ -1,4 +1,4 @@
-# studyWithMe
+# Smart Chef
 
 Examples of App Screenshots:
 1. sign in page
@@ -12,19 +12,17 @@ Examples of App Screenshots:
 
 
 Project description: 
-* Time tracking system designed to improve productivity while working/studying from home. 
-
-Project Functionalities: 
-* Track users’ daily productivity 
-* Diffrent studymate characters accompany user during the journey
-* Help user to avoid being distracted by mobile phone
-* Check up on historical summary of daily records
+* Smart Chef is a health and wellness related web application based on React framework. It's a dishes recognition app using pre-trained Machine Learning API. When users input the url link of dises images, Smart Chef will reconise the food items in the dishes down to the ingredient level and provide suggestions of recreating the dishes.
 
 Major technologies: 
-* Mobile application based on React Native framework
-* User’s time logs stored on device locally, using Async-Storage 
-* App has support for multiple users, user’s login implemented using Google SignIn 
-* Classes with main business logic covered with unit tests using Jest testing framework 
-* Operations with time implemented using Luxon library
+major technologies:
+* Web application based on React framework
+* UI built using Tachyons CSS toolkit,  CSS flexbox and etc.
+* RESTful API powered by express.js
+* User profiles and log-in details stored in PostgreSQL database
+* User passwords are securely hashed with Bcrypt
+* SQL queries are constructed with Knex.js to prevent SQL injections
+* Clarifai pre-trained Artificial Intelligence model is used to recognise ingredients.
+* Application is deployed and hosted on Heroku. Local development loop powered by Docker.
 
 
