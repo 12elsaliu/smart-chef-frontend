@@ -46,12 +46,6 @@ class App extends React.Component {
     },
   };
 
-  //testing
-  // componentDidMount() {
-  //   fetch('http://localhost:3000')
-  //     .then(res => res.json())
-  //     .then(console.log)
-  // }
   onInputChange = (event) => {
     this.setState({
       input: event.target.value,
@@ -59,18 +53,13 @@ class App extends React.Component {
   };
 
   onButtonClick = () => {
-    //Use machine learning API here
     this.setState(
       {
         imgUrl: this.state.input,
       },
       () => {
         app.models
-          .predict(
-            Clarifai.FOOD_MODEL,
-            // THE JPG
-            this.state.imgUrl
-          )
+          .predict(Clarifai.FOOD_MODEL, this.state.imgUrl)
           .then((response) => {
             fetch("https://salty-shelf-28856.herokuapp.com/image", {
               method: "PUT",
@@ -89,8 +78,6 @@ class App extends React.Component {
               })
               .catch(console.log);
             this.displayIngredients(response);
-            // this.lockDisplayBox(response)
-            //console.log(response.outputs[0].data.regions[0].region_info.bounding_box);
           })
           .catch((err) => {
             console.log(err);

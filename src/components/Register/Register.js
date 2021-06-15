@@ -42,7 +42,7 @@ export class Register extends React.Component {
         .then((res) => res.json()) //receive
         .then((data) => {
           if (data.id) {
-            this.props.loadUser(data); //Put it in App.js states, in order to let all the other components can use the register data
+            this.props.loadUser(data);
             this.props.onRouterChange("home");
           }
         })
